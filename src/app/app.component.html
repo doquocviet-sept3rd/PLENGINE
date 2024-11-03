@@ -1,0 +1,16 @@
+<div class='screen'>
+  <header>
+    <button *ngFor='let tab of tabs' class='tw-px-2.5 tw-py-1.5 tw-underline'>
+      {{ tab.title }}
+    </button>
+  </header>
+  <section>
+    <div *ngFor='let tab of tabs'>
+      {{ tab.title }}
+      <webview *ngIf='tab.active' [title]='tab.title' [attr.src]='tab.url' class='screen'></webview>
+    </div>
+  </section>
+  <footer>
+
+  </footer>
+</div>

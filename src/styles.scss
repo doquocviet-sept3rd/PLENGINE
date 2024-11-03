@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply tw-mr-0 tw-p-0 tw-box-border;
+}
+
+::-webkit-scrollbar {
+  @apply tw-w-3 tw-h-3;
+}
+
+::-webkit-scrollbar-track {
+  @apply tw-rounded-lg tw-bg-white;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply tw-bg-slate-400 tw-rounded-3xl;
+  border: 3px solid #FFF;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #FFF inset !important;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+input, label, textarea {
+  font-family: 'Roboto', sans-serif;
+  @apply tw-outline-0 tw-border-0;
+}
+
+.icon {
+  width: 22px;
+}
+
+.center-frame {
+  @apply tw-relative;
+
+  > *:first-child {
+    content: '';
+    @apply tw-rounded tw-absolute tw-top-1/2 tw-left-1/2 -tw-translate-x-1/2 -tw-translate-y-1/2;
+  }
+}
+
+.screen {
+  @apply tw-w-screen tw-h-screen;
+}
